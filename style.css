@@ -1,0 +1,157 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6e3e3;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
+}
+
+.task-form {
+  margin-bottom: 20px;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.task-form input:focus,
+.task-form textarea:focus,
+.task-form select:focus {
+  border-color: #ffc107;
+  outline: 1px solid #ffc107; /* Yellow outline */
+}
+
+#task-list {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.task-item {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.task-item .task-details {
+  margin-bottom: 10px;
+}
+
+.task-item .task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+/* Status colors */
+.status-pending {
+  background-color: #ffe0e0;
+}
+
+.status-in-progress {
+  background-color: #ffffe0;
+}
+
+.status-completed {
+  background-color: #e0ffe0;
+}
+
+/* Button colors */
+#add-task-btn {
+  background-color: #4caf50;
+}
+
+#add-task-btn:hover {
+  background-color: #45a049;
+}
+
+button.status {
+  background-color: #f44336;
+}
+
+button.status:hover {
+  background-color: #da190b;
+}
+
+button.delete {
+  background-color: #f44336;
+}
+
+button.delete:hover {
+  background-color: #da190b;
+}
+
+.task-item.status-completed button.status,
+.task-item.status-completed button.delete {
+  background-color: #4caf50;
+}
+
+.task-item.status-completed button.status:hover,
+.task-item.status-completed button.delete:hover {
+  background-color: #45a049;
+}
+
+.task-item.status-in-progress button.status,
+.task-item.status-in-progress button.delete {
+  background-color: #ffeb3b;
+  color: #333;
+}
+
+.task-item.status-in-progress button.status:hover,
+.task-item.status-in-progress button.delete:hover {
+  background-color: #fdd835;
+}
